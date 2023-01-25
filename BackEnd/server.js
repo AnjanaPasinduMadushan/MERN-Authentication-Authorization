@@ -4,8 +4,10 @@ const mongoose =require('mongoose');
 
 const router = require('./routes/user-routes');
 
-const app = express();
+const cookieParser = require('cookie-parser');
 
+const app = express();
+app.use(cookieParser());
 const PORT = process.env.PORT || 8070;
 
 app.use(express.json())
